@@ -6,6 +6,19 @@
   --font: #0A0603;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.navbar>* {
+  background-color: #343a40 !important;
+  z-index: 5;
+}
+
+.nav-item {
+  padding: 15px;
+}
+
 html {
   background-color: var(--background);
   color: var(--font);

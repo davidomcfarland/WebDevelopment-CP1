@@ -109,3 +109,57 @@ section, h1 {
       "  .     .     .   descr descr descr descr descr descr   .     .     .   "
   }
 }
+
+@media only screen and (min-width: 960px) {
+  figure {
+    grid-area: image;
+    display: flex;
+    background-color: var(--background);
+  }
+
+  img {
+    width: 80%;
+    margin: auto;
+  }
+
+  h1 {
+    grid-area: title;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#Description {
+    grid-area: descr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  section#CTA {
+    grid-area: _CTA_;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+  }
+
+  section#CTA p {
+    background-color: var(--primary);
+    flex: 20%;
+  }
+
+  main {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "title title title title title"
+      "  .   image image image   .  "
+      "  .   image image image   .  "
+      "  .   image image image   .  "
+      "_CTA_ _CTA_ descr descr descr";
+  }
+}

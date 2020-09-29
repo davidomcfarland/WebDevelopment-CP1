@@ -1,8 +1,18 @@
+* {
+  margin-top: 0;
+}
+
 main {
+  padding: 30px;
+  line-height: 2em;
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  border: 1px solid var(--tertiary);
-  width: 80%;
-  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
+
+h1 {
+  margin-bottom: 10px;
+}
+
+ul {}

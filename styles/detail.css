@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+}
+
+main, div.content {
+  overflow-y: scroll;
+  width: 100vw;
+}
+
+section {
+  padding: 20px;
+}
+
+section#header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: var(--background);
+  text-align: center;
+  font-size: 3vh;
+  border-bottom: 2px solid var(--tertiary);
+  box-shadow: 0 0 10px 1px var(--tertiary);
+}
+
+h2 {
+  position: sticky;
+  top: 0;
+}
+
+p {
+  text-indent: 30px;
+}
+
+p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  section#parents, section#subtopics {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  section#description {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+
+  section#parents, section#subtopics {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+  }
+}
