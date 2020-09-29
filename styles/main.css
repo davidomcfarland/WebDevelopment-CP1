@@ -1,0 +1,39 @@
+:root {
+  --primary: #38BA43;
+  --secondary: #BA6D25;
+  --tertiary: #130D21;
+  --background: #F5FFF5;
+  --font: #0A0603;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--font);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 10% 80% 10%;
+}
+
+nav {
+  grid-column: span 12;
+  background-color: var(--primary)
+}
+
+main {
+  grid-column: span 12;
+}
+
+footer {
+  grid-column: span 12;
+  background-color: var(--tertiary)
+}
