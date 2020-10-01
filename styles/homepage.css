@@ -5,6 +5,7 @@
 
 main {
   background-color: var(--tertiary);
+  background-color: #130D21;
   color: white;
 }
 
@@ -83,7 +84,7 @@ section#CTA:active>p#popup {
     font-size: 2em;
   }
 
-  main section {
+  main section#CTA {
     width: 64vw;
     position: fixed;
     top: calc(20vh + 80vw + 10vh);
@@ -94,6 +95,10 @@ section#CTA:active>p#popup {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  main section#Description {
+    display: none !important;
   }
 }
 
