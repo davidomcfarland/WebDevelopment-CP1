@@ -54,4 +54,12 @@ footer {
   flex: 9%;
   background-color: #343a40;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer * {
+  color: inherit;
+  text-decoration: inherit;
 }
