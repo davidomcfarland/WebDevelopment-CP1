@@ -3,12 +3,22 @@
   padding: 0;
 }
 
+main {
+  background-color: var(--tertiary);
+  color: white;
+}
+
 main figure img {
   border-radius: 50%;
+  box-shadow: 0 0 20px 5px RGBA(255, 255, 255, 0.5);
+  position: relative;
+  top: 0;
+  z-index: 2;
 }
 
 section#CTA p {
   background-color: var(--primary);
+  color: black;
   flex: 20%;
   padding: 15px;
   border-radius: 15px;
