@@ -1,18 +1,54 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 main figure img {
   border-radius: 50%;
 }
 
-section, h1 {
-  background-color: var(--background);
+section#CTA p {
+  background-color: var(--primary);
+  flex: 20%;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 15px;
+}
+
+section#CTA:hover p {
+  border: 2px solid var(--gray-dark);
+  cursor: pointer;
+}
+
+section#CTA:active p {
+  background-color: var(--gray-dark);
+  color: white;
+}
+
+p#popup {
+  display: none;
+}
+
+section#CTA:active p {
+  display: none;
+}
+
+section#CTA:active>p#popup {
+  display: block;
+  position: relative;
+  top: 0;
 }
 
 @media only screen and (max-width: 500px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: scroll;
+  }
+
   main figure img {
     width: 80vw;
     height: 80vw;
@@ -25,12 +61,16 @@ section, h1 {
     width: 40vw;
     height: 40vw;
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: calc(20vh + 20vw);
     left: 30vw;
     z-index: 1;
     padding: 15px;
     text-align: center;
-    background-color: RGBA(255, 255, 255, 0.5)
+    background-color: RGBA(255, 255, 255, 0.5);
+    font-size: 2em;
   }
 
   main section {
@@ -39,11 +79,11 @@ section, h1 {
     top: calc(20vh + 80vw + 10vh);
     left: 18vw;
     padding: 15px;
-    font-size: 80%;
-  }
-
-  main nav {
-    background-color: var(--primary);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -51,7 +91,6 @@ section, h1 {
   figure {
     grid-area: image;
     display: flex;
-    background-color: var(--background);
   }
 
   img {
@@ -62,7 +101,6 @@ section, h1 {
 
   h1 {
     grid-area: title;
-    background-color: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,14 +116,8 @@ section, h1 {
 
   section#CTA {
     grid-area: _CTA_;
-    background-color: var(--background);
     display: flex;
     align-items: center;
-  }
-
-  section#CTA p {
-    background-color: var(--primary);
-    flex: 20%;
   }
 
   main {
@@ -110,21 +142,21 @@ section, h1 {
   }
 }
 
-@media only screen and (min-width: 960px) {
-  figure {
+@media only screen and (min-width: 961px) {
+  figure#globe {
     grid-area: image;
     display: flex;
-    background-color: var(--background);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   img {
-    width: 80%;
-    margin: auto;
+    width: min(80%, 50vh)
   }
 
   h1 {
     grid-area: title;
-    background-color: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,18 +172,17 @@ section, h1 {
 
   section#CTA {
     grid-area: _CTA_;
-    background-color: var(--background);
     display: flex;
     align-items: center;
   }
 
   section#CTA p {
-    background-color: var(--primary);
     flex: 20%;
   }
 
   main {
     width: 100vw;
+    height: 80vmin;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
