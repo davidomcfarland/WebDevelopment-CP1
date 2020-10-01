@@ -63,3 +63,8 @@ footer * {
   color: inherit;
   text-decoration: inherit;
 }
+
+footer *:active, footer *:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
