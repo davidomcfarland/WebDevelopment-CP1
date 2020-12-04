@@ -22,7 +22,7 @@
         </div>
       </nav>
     <router-view/>
-    <footer>Check this site out on GitHub</footer>
+    <footer><a href="https://github.com/davidomcfarland/WebDevelopment-CP1/tree/master/the-big-picture">Check this site out on GitHub</a></footer>
   </div>
 </template>
 
